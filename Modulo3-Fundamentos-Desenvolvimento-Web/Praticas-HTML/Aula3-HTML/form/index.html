@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários no HTML</title>
+</head>
+<body>
+    <h1>Cadastro de Evento</h1>
+    <form action="./no_action">    
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            
+            <label for="nome">Nome: </label>
+            <input id="nome" type="text" required placeholder="Digite seu nome. Ex: João Silva">
+            <br>
+
+            <label for="email">Email: </label>
+            <input id="email" type="email" required placeholder="exemplo@mail.com">
+            <br>
+
+            <label for="idade">Idade: </label>
+            <input type="number" name="idade" id="idade" required placeholder="Ex: 18" min="18">
+        </fieldset>
+
+        <fieldset>
+            <legend>Tipo de ingresso</legend>
+            <label for="padrao">Padrão</label>
+            <input type="radio" name="ingresso" id="padrao" value="" checked>
+            <label for="vip">Vip</label>
+            <input type="radio" name="ingresso" id="vip" value="">
+        </fieldset>
+
+        <fieldset>
+            <legend>Áreas de Interesse</legend>
+            <label for="ia">IA</label>
+            <input type="checkbox" name="interesse" id="ia">
+            <label for="devops">DevOps</label>
+            <input type="checkbox" name="interesse" id="devops">
+            <label for="design">Design</label>
+            <input type="checkbox" name="interesse" id="design">
+            <label for="outros">Outros</label>
+            <input type="checkbox" name="interesse" id="outros">
+        </fieldset>
+        <fieldset>
+            <legend>Escolha um País</legend>
+            <label for="pais">País</label>
+            <select name="pais" id="pais">
+                <optgroup label="Selecione um país">
+                    <option value="br">Brasil</option>
+                    <option value="ve">Venezuela</option>
+                    <option value="usa">Estados Unidos</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

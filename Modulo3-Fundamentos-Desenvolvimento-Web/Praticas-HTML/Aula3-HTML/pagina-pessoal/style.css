@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.conteudo-sobre {
+    display: flex;
+    gap: 20px;
+}
+
+.conteudo-sobre div {
+    max-width: 400px;
+}
+
+img {
+    width: 12%;
+    max-width: 100%;
+    height: auto;
+}
+
+#hobbies ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
