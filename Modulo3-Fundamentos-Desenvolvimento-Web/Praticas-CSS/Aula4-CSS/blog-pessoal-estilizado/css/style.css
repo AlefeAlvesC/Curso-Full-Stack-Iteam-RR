@@ -1,0 +1,491 @@
+/* Variáveis CSS*/
+:root {
+    /*--o-cor-primaria: rgba(57, 171, 163, 0.69);*/
+    --cor-primaria: #a5e9c1;
+    --cor-primaria-escuro: #0acc5b;
+    --cor-segundaria: #bebebe;
+    --o-cor-segundaria: #E8E2E2;
+    --o-cor-terciaria: #F1F3E0;    
+}
+
+/* Resete do CSS*/
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos padrões*/
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-small {
+    font-size: 0.9rem;
+}
+
+.button {
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--cor-primaria-escuro);
+    box-shadow: 1px 1px 5px #026b2e;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    transition: 0.7s;
+    background-color: #026b2e;
+    box-shadow: 0px 3px 10px #026b2e;
+    transform: translateY(3px) scale(1.1);
+}
+
+/*Estilos do HTML*/
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos do Body */
+body {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+}
+
+/*Estilos do Header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 15px 20px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 2px 0px 5px var(--cor-segundaria);
+    z-index: 1000;
+}
+
+header p a {
+    font-family: "Asimovian", sans-serif; /*cursive*/
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-primaria-escuro);
+    text-decoration: none;
+}
+
+/*Estilos nav mobile quando menu fechado*/
+nav.fechado {
+    display: none;
+}
+
+/*Estilos nav mobile quando menu aberto*/
+nav {
+    position: absolute;
+    top: 100%;
+    right: 2%;
+    background-color: #fff;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;  
+    height: 100%;
+}
+
+nav ul li {
+    height: 100%;
+}
+
+nav ul li a {
+    font-family: "Asimovian", sans-serif; /*cursive*/
+    height: 100%;
+    text-decoration: none;
+    color: #504d4d;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    transition: 0.4s;
+    color: var(--cor-primaria-escuro);
+    transform: scale(1.1);
+}
+
+header button{
+    border: none;
+    background-color: var(--cor-primaria-escuro);
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+header button:hover {
+    transition: 0.4s;
+    box-shadow: 0px 3px 10px var(--cor-primaria-escuro);
+}
+
+/*Esilos do main*/
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 21.5% 0.5fr 1.05fr 1.45fr;
+
+}
+
+section {
+
+    padding: 20px;
+    scroll-margin-top: 50px;
+}
+
+section .subtitle {
+    display: flex;
+    align-self: flex-start;
+}
+
+section h2 {
+    font-family: "Asimovian", sans-serif; /*cursive*/
+    font-size: 1.8rem;
+    color: #504d4d;
+    border-bottom: 3px solid var(--cor-primaria);
+}
+
+section h3 {
+    font-family: "Asimovian", sans-serif;
+    font-size: 1.5rem;
+    color: #504d4d;
+}
+
+/*
+#intro{
+background: #4d966b;
+background: linear-gradient(0deg,rgba(77, 150, 107, 1) 0%, rgba(113, 209, 153, 1) 50%, rgba(130, 255, 182, 1) 100%);
+box-shadow: 0px 3px 10px #4d966b;
+}
+*/
+#intro {
+    scroll-margin-top: 50px;
+    background-image: linear-gradient(to bottom, var(--cor-primaria), transparent 100%);
+}
+
+#intro .content {
+    gap: 40px;
+}
+
+#intro h1 {
+    font-size: 2.5rem;
+    color: #504d4d;
+    text-align: center;
+}
+
+#intro h1 span {
+    font-family: "Asimovian", sans-serif; /*cursive*/
+    color: var(--cor-primaria-escuro);
+}
+
+#intro p {
+    font-size: 0.8rem;
+    color: #504d4d;
+    text-align: center;
+}
+
+#intro .boas-vindas {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #504d4d;
+    text-align: center;
+}
+
+/* Intro BUTTON*/
+
+#intro i{
+    font-size: 1.8rem;
+    color: var(--cor-primaria-escuro);
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+#sobre{
+    justify-content: flex-start;
+    gap: 15px;
+    /*background-color: var(--o-cor-segundaria);*/
+    background-image: linear-gradient(to top, var(--cor-segundaria), transparent 10%);
+}
+
+#sobre img {
+    width: 30%;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px #504d4d;
+    object-fit: cover;
+}
+
+#sobre div div{
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    width: 80%;
+    border: 2px solid var(--cor-primaria);
+}
+
+#sobre div p{
+    text-align: justify;
+    color: #504d4d;
+}
+
+#habilidades {
+    gap: 20px;
+    background-color: #bebebe;
+}
+
+#habilidades ul {
+    display: grid;
+    justify-items: center;
+    list-style: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#habilidades ul li {
+    display: flex;
+    width: 70%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    gap: 20px;
+    box-shadow: 2px 2px 10px #504d4d;
+}
+
+#habilidades ul li:hover {
+    transition: 0.4s;
+    transform: translateY(-5px);
+}
+
+#habilidades ul li p {
+    color: #504d4d;
+}
+
+#habilidades ul li > p {
+    text-align: justify;
+}
+
+/**/
+#contato {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contato ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#contato ul li i{
+    align-items: center;
+    gap: 10px;
+    color: #504d4d;
+    font-size: 2rem;
+}
+
+#contato .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contato .content p {
+    text-align: justify;
+    color: #504d4d;
+    width: 80%;
+}
+
+#contato .content #redes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contato .content #form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contato .content #form label {
+    color: #504d4d;
+    font-weight: 600;
+}
+
+#contato .content #form input {
+    width: 100%;
+    padding: 7px 15px;
+    border-radius: 5px;
+    border: 2px solid #bebebe
+}
+
+#contato .content #form input:focus {
+    outline: none;
+    border: 2px solid var(--cor-primaria);
+    box-shadow: 2px 2px 10px var(--cor-primaria);
+}
+
+#contato .content #form select {
+    width: 100%;
+    padding: 7px 15px;
+    border-radius: 5px;
+    border: 2px solid #bebebe;   
+}
+
+#contato .content #form select:focus {
+    border: 2px solid var(--cor-primaria);
+    box-shadow: 2px 2px 10px var(--cor-primaria);
+}
+
+#contato .content #form textarea {
+    width: 100%;
+    padding: 7px 15px;
+    border-radius: 5px;
+    border: 2px solid #bebebe
+}
+
+#contato .content #form textarea:focus {
+    outline: none;
+    border: 2px solid var(--cor-primaria);
+    box-shadow: 2px 2px 10px var(--cor-primaria);    
+}
+
+#contato .content #form button {
+    margin-top: 10px;
+}
+
+/*Estilos do Footer*/
+footer {
+    background-color: var(--cor-segundaria);
+    box-shadow: 0px 0px 3px #504d4d;
+    padding: 30px 0px;
+}
+
+@media (min-width: 456px) {
+    main {
+        grid-template-rows: 23% 0.5fr 1fr 1.5fr;
+    }
+
+    #sobre {
+        background-image: linear-gradient(to top, var(--cor-segundaria), transparent 5%);
+    }
+
+}
+
+@media (min-width: 768px) {
+    main {
+        grid-template-rows: 1fr 1fr 0.7fr 1.3fr;
+    }
+
+    nav {
+        display: block;  
+        height: 100%;
+        position: static;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        list-style: none;  
+        height: 100%;
+    }
+
+    nav ul li {
+        height: 100%;
+    }
+
+    nav ul li a {
+        font-family: "Asimovian", sans-serif; /*cursive*/
+        height: 100%;
+        text-decoration: none;
+        color: #504d4d;
+        padding: 10px;
+    }
+
+    nav ul li a:hover {
+        transition: 0.4s;
+        color: var(--cor-primaria-escuro);
+        transform: scale(1.1);
+    }
+
+    header button {
+        display: none !important;
+    }
+
+    #sobre div div {
+        width: 50%;
+    }
+
+    #habilidades ul {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #habilidades ul li {
+        width: 95%;
+    }
+
+    #contato .content p {
+        width: 50%
+    }
+
+    #contato .content #form input, #contato .content #form select, #contato .content #form textarea {
+        width: 80%;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    main {
+        grid-template-rows: 1.3fr 0.95fr 0.65fr 1.5fr;
+    }
+
+    #sobre {
+        background-image: linear-gradient(to top, var(--cor-segundaria), transparent 5%);
+    }
+
+    #sobre div div {
+        width: 40%;
+    }
+
+    #habilidades ul {
+        width: 80%;
+    }
+
+    #habilidades ul li {
+        width: 80%;
+    }
+
+    #contato .content p {
+        width: 30%
+    }
+}

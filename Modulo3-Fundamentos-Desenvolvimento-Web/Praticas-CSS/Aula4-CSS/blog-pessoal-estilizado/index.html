@@ -5,25 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Alefe">
     <title>Álefe Alves | Dev Full Stack</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asimovian&display=swap" rel="stylesheet">
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <!-- Font Icons -->  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    
+
 </head>
 <body>
     <header>
         <p><a href="#intro">Álefe Alves</a></p>
-        <nav>
+        <nav class="fechado">
             <ul>
                 <li><a href="#intro" class="center">Home</a></li>
                 <li><a href="#sobre" class="center">Sobre</a></li>
                 <li><a href="#contato" class="center">Contato</a></li>
             </ul>
         </nav>
+        <button type="button" class="center"><i class="fa-solid fa-bars"></i></button>
     </header>
     <main>
         <section id="intro" class="center">
@@ -40,12 +45,15 @@
                 <a class="button" href="https://www.canva.com/design/DAFczyne18s/MpR0XH3xrqhjKYRdH5gesA/edit?utm_content=DAFczyne18s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">
                     Ver Currículo
                 </a>
-
+                <a href="#intro"><i class="fa-solid fa-circle-arrow-up"></i></a>
             </div>
         </section>
 
-        <section id="sobre">
-            <h2>Sobre Mim</h2>
+        <section id="sobre" class="center-col">
+            <div class="subtitle">
+                <h2>Sobre Mim</h2>
+            </div>
+            
 
             <figure class="center">
                 <img src="./img/foto_rosto_1.jpeg" alt="Foto de Rosto do Autor">
@@ -69,8 +77,10 @@
             </div>
         </section>
 
-        <section id="habilidades">
-            <h2>Habilidades</h2>
+        <section id="habilidades" class="center-col">
+            <div class="subtitle">
+                <h2>Habilidades</h2>
+            </div>
             <ul class="techs">
                 <li class="tech center-col">
                     <div class="center-col">
@@ -115,8 +125,73 @@
         </section>
         -->
 
-        <section id="contato">
-            <h2>Contato</h2>
+        <section id="contato" class="center-col">
+            <div class="subtitle">
+                <h2>Contato</h2>
+            </div>
+            <div class="content">
+                <div id="cont-intro" class="center">
+                    <p>
+                        Estou sempre aberto a novas oportunidades e colaborações. 
+                        Se você tiver alguma dúvida, sugestão ou simplesmente quiser 
+                        conversar sobre tecnologia, sinta-se à vontade para entrar em contato comigo.
+                    </p>
+                </div>
+                
+                <div id="redes">
+                    <h3>Minhas Redes</h3>
+                    <div class="center">
+                        <ul class="contact-list center">
+                            <li><a href="https://www.linkedin.com/in/%C3%A1lefe-alves-4a8988243/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href="mailto:alefe.alves@aluno.faculdade.com.br"><i class="fa-solid fa-envelope"></i></a></li>
+                            <li><a href="https://github.com/AlefeAlvesC" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="form">
+                    <h3>Envie uma mensagem</h3>
+                    <div>
+                        <form action="">
+                            <div>
+                                <label for="name">Nome *</label>
+                                <br>
+                                <input type="text" name="name" id="name" placeholder="Seu nome" required>
+                            </div>
+                            <br>
+
+                            <div>
+                                <label for="email">E-mail *</label>
+                                <br>
+                                <input type="email" name="email" id="email" placeholder="seu@email.com" required>
+                            </div>
+                            <br>
+
+                            <div>
+                                <label for="assunto">Assunto</label>
+                                <br>
+                                <select name="assunto" id="assunto" required>
+                                    <option value>-- Selecione --</option>
+                                    <option value="proposta">Proposta</option>
+                                    <option value="sugestao">Sugestão</option>
+                                    <option value="duvida">Dúvida</option>
+                                </select>
+                            </div>
+                            
+                            <br>
+                            
+                            <label for="message">Mensagem *</label>
+                            <br>
+                            <textarea name="message" id="message" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+                            <br>
+                            <button type="submit" class="button">Enviar Mensagem</button>
+                            
+                        </form>
+                        
+                    </div>
+                </div>
+                    
+            </div>
+            
         </section>
     </main>
 
